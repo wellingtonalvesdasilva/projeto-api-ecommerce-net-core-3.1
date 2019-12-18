@@ -36,7 +36,7 @@ namespace ApiEcommerce
             services.AddControllers();
 
             //Banco em Memória para poder publicar no Azure
-            //services.AddDbContext<EcommerceContext>(options => options.UseInMemoryDatabase(databaseName: "TaskListDatabase"));
+            //services.AddDbContext<EcommerceContext>(options => options.UseInMemoryDatabase(databaseName: "VendasDatabase"));
 
             services.AddDbContext<EcommerceContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
